@@ -1,0 +1,52 @@
+.nav1_mainDiv {
+    position: absolute;
+    width: 100%;
+    height: 72px;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    background: #1a242f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+/* .nav1_leftDiv {
+    display: flex;
+    justify-content: space-between;
+} */
+.nav1_leftDiv_primelogo {
+    margin-left: 47px;
+}
+.nav1_leftDiv_primelogo img{
+    width: 100px;
+}
+
+.nav1_rightDiv {
+    display: flex;
+    justify-content: center;
+}
+.nav1_rightDiv_language {
+    margin-right: 21px;
+}
+
+.nav1_rightDiv_signIn {
+    margin-right: 47px;
+    font-family: "Roboto",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 3px;
+
+    color: rgba(255, 255, 255, 0.8) !important;
+    cursor: pointer;
+}
+
+.nav1_rightDiv_signIn_link{
+    color: rgba(255, 255, 255, 0.8)
+}
+
+.nav1_rightDiv_signIn_link:hover{
+    color: #ffffff !important;
+}
