@@ -1,59 +1,42 @@
 import React from "react";
 
-import { Carousel } from "react-bootstrap";
+import slideshow1 from "./slideshow1.jpeg";
+import slideshow2 from "./slideshow2.jpeg";
+import slideshow3 from "./slideshow3.jpeg";
+
+import slideshow4 from "./slideshow4.jpeg";
+//import slideshow5 from "./slideshow5.jpeg";
+import slideshow6 from "./slideshow6.jpeg";
+import slideshow7 from "./slideshow7.jpeg";
 
 function BootStrapCarousal() {
   return (
-    <div>
-      <div
-        id="carouselExampleIndicators"
-        className="carousel slide"
-        data-ride="carousel"
-      >
-        <ol className="carousel-indicators">
-          <li
-            data-target="#carouselExampleIndicators"
-            data-slide-to="0"
-            className="active"
-          ></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img className="d-block w-100" src="..." alt="First slide" />
-          </div>
-          <div className="carousel-item">
-            <img className="d-block w-100" src="." alt="Second slide" />
-          </div>
-          <div className="carousel-item">
-            <img className="d-block w-100" src="..." alt="Third slide" />
-          </div>
+    <div
+      id="carouselExampleSlidesOnly"
+      className="carousel slide"
+      data-ride="carousel"
+      data-interval="2000"
+      data-pause="hover"
+    >
+      <div className="carousel-inner">
+        <div className="carousel-item active">
+          <img className="d-block w-100" src={slideshow1} alt="First slide" />
         </div>
-        <a
-          className="carousel-control-prev"
-          href="#carouselExampleIndicators"
-          role="button"
-          data-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="sr-only">Previous</span>
-        </a>
-        <a
-          className="carousel-control-next"
-          href="#carouselExampleIndicators"
-          role="button"
-          data-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="sr-only">Next</span>
-        </a>
+        <div className="carousel-item">
+          <img className="d-block w-100" src={slideshow2} alt="Second slide" />
+        </div>
+        <div className="carousel-item">
+          <img className="d-block w-100" src={slideshow3} alt="Third slide" />
+        </div>
+        <div className="carousel-item">
+          <img className="d-block w-100" src={slideshow4} alt="fourth slide" />
+        </div>
+        <div className="carousel-item">
+          <img className="d-block w-100" src={slideshow7} alt="fifth slide" />
+        </div>
+        <div className="carousel-item">
+          <img className="d-block w-100" src={slideshow6} alt="sixth slide" />
+        </div>
       </div>
     </div>
   );
