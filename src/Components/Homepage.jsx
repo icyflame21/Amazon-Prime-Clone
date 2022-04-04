@@ -1,24 +1,21 @@
-import {
-    Button_LoginToPrime,
-    Button_getStarted,
-    Button_getPrimePerMonth,
-    Button_continueAtPayment,
-} from './Styles/ButtonTillCheckout'
+import {Button_LoginToPrime} from './Styles/ButtonTillCheckout'
 import styles from './Styles/Homepage.module.css'
 import rectangle12 from "./Images/Rectangle12.png";
 import rectangle13 from "./Images/Rectangle13.png";
 import rectangle15 from "./Images/Rectangle15.png";
 import rectangle16 from "./Images/Rectangle16.png";
-
+import { Navbar1 } from './Navbar1'
+import {Footer1} from './Footer1'
 import { Link } from 'react-router-dom';
 
 function Homepage() {
     return (
         <>
+            <Navbar1/>
         <div className={styles.Home_mainDiv}>
             <div className={styles.Home_mainDiv_flexDiv}>
                 <div>
-                    <img className={styles.img1} src={rectangle12}></img>
+                    <img className={styles.Home_img1} src={rectangle12}></img>
                 </div>
                 <div className={styles.Home_mainDiv_flexDiv_ContentDiv}>
                     <h1 className={styles.Home_mainDiv_flexDiv_ContentDiv_h1}>
@@ -38,7 +35,7 @@ function Homepage() {
             </div>
             <div className={styles.Home_mainDiv_flexDiv1}>
                 <div>
-                    <img src={rectangle13}></img>
+                    <img className={styles.Home_img2} src={rectangle13}></img>
                 </div>
                 <div className={styles.Home_mainDiv_flexDiv_ContentDiv}>
                     <h1 className={styles.Home_mainDiv_flexDiv_ContentDiv_h1}>
@@ -85,6 +82,7 @@ function Homepage() {
                 </div>
             </div>
             </div>
+            <Footer1/>
         </>
     );
   }

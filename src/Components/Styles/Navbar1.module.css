@@ -1,50 +1,49 @@
 .nav1_mainDiv {
-    position: absolute;
+    position: fixed;
     width: 100%;
-    height: 72px;
-    left: 0px;
-    top: 0px;
-    right: 0px;
+    height: 80px;
+    top:0;
+    left:0;
     background: #1a242f;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     color: rgba(255, 255, 255, 0.8) !important;
 }
-/* .nav1_leftDiv {
-    display: flex;
-    justify-content: space-between;
-} */
+
 .nav1_leftDiv_primelogo {
     margin-left: 47px;
 }
-.nav1_leftDiv_primelogo img{
+.nav1_img{
+    height: 100px;
     width: 100px;
+    object-fit: contain;
 }
 
-.nav1_rightDiv {
+.nav1_rightDiv{
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 .nav1_rightDiv_language {
-    margin-right: 21px;
+    margin-top: 10px;
+    position: fixed;
+    right: 150px;
 }
 
 .nav1_rightDiv_signIn {
-    margin-right: 47px;
+    position: fixed;
+    right: 75px;
     font-family: "Roboto",sans-serif;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 300;
     font-size: 16px;
-    line-height: 19px;
     margin-top: 3px;
-
     color: rgba(255, 255, 255, 0.8) !important;
     cursor: pointer;
 }
 
 .nav1_rightDiv_signIn_link{
-    color: rgba(255, 255, 255, 0.8)
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
 }
 
 .nav1_rightDiv_signIn_link:hover{
