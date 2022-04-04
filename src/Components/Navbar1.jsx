@@ -3,7 +3,8 @@ import styles from "./Styles/Navbar1.module.css";
 import Primelogo from "./Images/Primelogo.svg";
 import LanguageEnLogo from "./Images/Nav1_Language.svg";
 import {Link} from "react-router-dom";
-import {Homepage} from './Homepage'
+import { Homepage } from './Homepage'
+
 export const Navbar1 = () => {
   return (
     <div className={styles.nav1_mainDiv}>

@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 function Homepage() {
     return (
         <>
-            <Navbar1/>
+        <Navbar1/>
         <div className={styles.Home_mainDiv}>
             <div className={styles.Home_mainDiv_flexDiv}>
                 <div>
