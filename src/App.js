@@ -1,10 +1,8 @@
-import AllRoutes from "./Components/Routes/AllRoutes";
-import {Homepage} from "./Components/Homepage";
+import {AllRoutes} from "./Components/Routes/AllRoutes";
 function App() {
   return (
     <>
-    {/* <AllRoutes /> */}
-    <Homepage/>
+      <AllRoutes/>
     </>
     
   );

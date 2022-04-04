@@ -15,9 +15,7 @@
     display: flex;
     background-color: #252525;
     flex-direction: row-reverse;
-    text-align: left;
     align-items:center;
-    justify-content: space-between;
 }
 .Home_img1{
     width: 100%;
@@ -29,12 +27,12 @@
     width: 90%;
     object-fit: cover;
     object-position:2% 0 ;
+    padding: 8px 0 0 0;
 }
 img{
     height: 400px;
     width: 90%;
     object-fit: cover;
-    padding: 8px 0 8px 0;
 }
 .Home_mainDiv_flexDiv1{
     display: flex;
@@ -66,6 +64,7 @@ img{
 .Home_mainDiv_flexDiv_ContentDiv_p1{
     font-family:'Roboto',sans-serif;
     font-weight: 100;
+    margin-top: 7px;
     margin-left: 28px;
     font-size: 15px;
 }

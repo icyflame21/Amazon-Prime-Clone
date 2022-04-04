@@ -1,14 +1,13 @@
 import React from "react";
 import { Homepage } from "../Homepage";
-//import { Navbar1 } from "../Navbar1";
 import { Routes, Route } from "react-router-dom";
 
-const AllRoutes = () => {
+export const AllRoutes = () => {
   return (
     <Routes>
-      <Route path="/" component={<Homepage />} />
+      <Route path="/" element={<Homepage />} />
     </Routes>
   );
 };
 
-export default AllRoutes;
+

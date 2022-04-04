@@ -3,12 +3,14 @@ import styles from "./Styles/Navbar1.module.css";
 import Primelogo from "./Images/Primelogo.svg";
 import LanguageEnLogo from "./Images/Nav1_Language.svg";
 import {Link} from "react-router-dom";
-
+import {Homepage} from './Homepage'
 export const Navbar1 = () => {
   return (
     <div className={styles.nav1_mainDiv}>
-        <div className={styles.nav1_leftDiv_primelogo}>
-          <img className={styles.nav1_img} src={Primelogo} alt="" />
+      <div className={styles.nav1_leftDiv_primelogo}>
+        <Link to={ Homepage}>
+          <img className={styles.nav1_img} src={Primelogo} alt="" /></Link>
+          
         </div>
       <div className={styles.nav1_rightDiv}>
         <div className={styles.nav1_rightDiv_language}>
