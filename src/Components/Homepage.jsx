@@ -7,9 +7,10 @@ import rectangle16 from "./Images/Rectangle16.png";
 import { Navbar1 } from "./Navbar1";
 import { Footer1 } from "./Footer1";
 import { Link } from "react-router-dom";
-import BootStrapCarousal from "../Banner";
+
 import Row from "../Row";
 import userrequests from "../Request";
+import { BootStrapCarousal } from "./slideshow/BootStrapCarousal";
 
 function Homepage() {
   return (
@@ -18,7 +19,7 @@ function Homepage() {
       <div className={styles.Home_mainDiv}>
         <div className={styles.Home_mainDiv_flexDiv}>
           <div>
-            <img className={styles.Home_img1} src={rectangle12}></img>
+            <img className={styles.Home_img1} src={rectangle12} alt=""></img>
           </div>
           <div className={styles.Home_mainDiv_flexDiv_ContentDiv}>
             <h1 className={styles.Home_mainDiv_flexDiv_ContentDiv_h1}>
@@ -40,7 +41,7 @@ function Homepage() {
         </div>
         <div className={styles.Home_mainDiv_flexDiv1}>
           <div>
-            <img className={styles.Home_img2} src={rectangle13}></img>
+            <img className={styles.Home_img2} src={rectangle13} alt=""></img>
           </div>
           <div className={styles.Home_mainDiv_flexDiv_ContentDiv}>
             <h1 className={styles.Home_mainDiv_flexDiv_ContentDiv_h1}>
@@ -58,7 +59,7 @@ function Homepage() {
         </div>
         <div className={styles.Home_mainDiv_flexDiv}>
           <div>
-            <img src={rectangle15}></img>
+            <img src={rectangle15} alt=""></img>
           </div>
           <div className={styles.Home_mainDiv_flexDiv_ContentDiv}>
             <h1 className={styles.Home_mainDiv_flexDiv_ContentDiv_h1}>
@@ -76,7 +77,7 @@ function Homepage() {
         </div>
         <div className={styles.Home_mainDiv_flexDiv1}>
           <div>
-            <img src={rectangle16}></img>
+            <img src={rectangle16} alt=""></img>
           </div>
           <div className={styles.Home_mainDiv_flexDiv_ContentDiv}>
             <h1 className={styles.Home_mainDiv_flexDiv_ContentDiv_h1}>
@@ -93,8 +94,9 @@ function Homepage() {
           </div>
         </div>
       </div>
-      <Footer1 />
+
       <BootStrapCarousal />
+      <Footer1 />
 
       <Row
         title="Netflix Originals"

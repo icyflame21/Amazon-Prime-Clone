@@ -18,7 +18,7 @@ function BootStrapCarousal() {
       data-interval="2000"
       data-pause="hover"
     >
-      <div className="carousel-inner">
+      <div className="carousel-inner" style={{ backgroundColor: "black" }}>
         <div className="carousel-item active">
           <img className="d-block w-100" src={slideshow1} alt="First slide" />
         </div>
