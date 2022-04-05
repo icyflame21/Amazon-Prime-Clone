@@ -42,4 +42,4 @@ function BootStrapCarousal() {
   );
 }
 
-export default BootStrapCarousal;
+export { BootStrapCarousal };

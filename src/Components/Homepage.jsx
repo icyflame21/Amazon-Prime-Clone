@@ -7,7 +7,9 @@ import rectangle16 from "./Images/Rectangle16.png";
 import { Navbar1 } from "./Navbar1";
 import { Footer1 } from "./Footer1";
 import { Link } from "react-router-dom";
-import BootStrapCarousal from "./Slideshow/BootStrapCarousal";
+import BootStrapCarousal from "../Banner";
+import Row from "../Row";
+import userrequests from "../Request";
 
 function Homepage() {
   return (
@@ -93,6 +95,24 @@ function Homepage() {
       </div>
       <Footer1 />
       <BootStrapCarousal />
+
+      <Row
+        title="Netflix Originals"
+        fetchURL={userrequests.fetchNetflixOriginals}
+      />
+      <Row title="Trending Now" fetchURL={userrequests.fetchTrending} />
+
+      <Row title="Top Rated" fetchURL={userrequests.fetchTopRated} />
+
+      <Row title="Action Movies" fetchURL={userrequests.fetchActionMovies} />
+
+      <Row title="Comedy Moview" fetchURL={userrequests.fetchComedyMovies} />
+
+      <Row title="Horror Movies" fetchURL={userrequests.fetchHorrorMovies} />
+
+      <Row title="Romatic Moview" fetchURL={userrequests.fetchRomanceMovies} />
+
+      <Row title="Documentaries" fetchURL={userrequests.fetchDocumentaries} />
     </>
   );
 }
