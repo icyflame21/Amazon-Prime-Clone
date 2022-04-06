@@ -1,11 +1,13 @@
 .row {
   color: #fff;
   background-color: #313552;
-  margin-left: 20px;
+  margin-left: 0px;
 }
 .row__posters {
   display: flex;
   overflow-y: hidden;
+  margin-right: 5px;
+  height: 200px;
   overflow-x: scroll;
   padding: 20px;
 }

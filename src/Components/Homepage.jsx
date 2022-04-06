@@ -96,29 +96,20 @@ function Homepage() {
           </div>
         </div>
       </div>
-
       <BootStrapCarousal />
-      <NavbarAfterLogin />
-
       <Footer1 />
       <Banner />
-
+      {/*<NavbarAfterLogin />*/}
       <Row
         title="Continue Watching"
         fetchURL={userrequests.fetchNetflixOriginals}
       />
       <Row title="Recommended movies" fetchURL={userrequests.fetchTrending} />
-
       <Row title="Top Rated" fetchURL={userrequests.fetchTopRated} />
-
       <Row title="Action Movies" fetchURL={userrequests.fetchActionMovies} />
-
       <Row title="Comedy Moview" fetchURL={userrequests.fetchComedyMovies} />
-
       <Row title="Horror Movies" fetchURL={userrequests.fetchHorrorMovies} />
-
       <Row title="Romatic Moview" fetchURL={userrequests.fetchRomanceMovies} />
-
       <Row title="Documentaries" fetchURL={userrequests.fetchDocumentaries} />
     </>
   );
