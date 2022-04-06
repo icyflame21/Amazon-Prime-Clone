@@ -1,9 +1,9 @@
+import React from 'react'
 import { AllRoutes } from "./Components/Routes/AllRoutes";
-import { CreateAccount} from "./Components/CreateAccount";
 function App() {
   return (
     <>
-      <AllRoutes/>
+    <AllRoutes /> 
     </>
     
   );

@@ -1,4 +1,5 @@
-import {Button_LoginToPrime} from './Styles/ButtonTillCheckout'
+import React from 'react';
+import { Button_LoginToPrime } from './Styles/ButtonTillCheckout'
 import styles from './Styles/Homepage.module.css'
 import rectangle12 from "./Images/Rectangle12.png";
 import rectangle13 from "./Images/Rectangle13.png";
