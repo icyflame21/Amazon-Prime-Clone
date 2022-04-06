@@ -19,25 +19,25 @@ function Row({ title, fetchURL }) {
   console.log(movies);
 
   return (
-    <div className="row">
-      <h2>{title}</h2>
-      <div className="row__posters">
-        {/* several posters */}
-        {movies.map((movie) => (
-          <>
+    <>
+      <div className="row">
+        <h2>{title}</h2>
+        <div className="row__posters">
+          {/* several posters */}
+          {movies.map((movie) => (
             <img
               key={movie.id}
               className="row__poster"
               src={`${base_url}${movie.poster_path}`}
               alt={movie.name}
             />
-            <p className="row__poster">{movie.title}</p>
-          </>
-        ))}
-      </div>
+            // <p className="row__poster">{movie.title}</p>
+          ))}
+        </div>
 
-      {/* conatiner -> posters */}
-    </div>
+        {/* conatiner -> posters */}
+      </div>
+    </>
   );
 }
 

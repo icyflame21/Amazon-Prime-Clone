@@ -1,9 +1,7 @@
-* {
-}
 .row {
   color: #fff;
-  margin-left: 0px;
   background-color: #313552;
+  margin-left: 20px;
 }
 .row__posters {
   display: flex;

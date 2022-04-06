@@ -11,6 +11,8 @@ import { Link } from "react-router-dom";
 import Row from "../Row";
 import userrequests from "../Request";
 import { BootStrapCarousal } from "./slideshow/BootStrapCarousal";
+import NavbarAfterLogin from "./NavbarAfterLogin";
+import Banner from "../Banner";
 
 function Homepage() {
   return (
@@ -96,13 +98,16 @@ function Homepage() {
       </div>
 
       <BootStrapCarousal />
+      <NavbarAfterLogin />
+
       <Footer1 />
+      <Banner />
 
       <Row
-        title="Netflix Originals"
+        title="Continue Watching"
         fetchURL={userrequests.fetchNetflixOriginals}
       />
-      <Row title="Trending Now" fetchURL={userrequests.fetchTrending} />
+      <Row title="Recommended movies" fetchURL={userrequests.fetchTrending} />
 
       <Row title="Top Rated" fetchURL={userrequests.fetchTopRated} />
 
