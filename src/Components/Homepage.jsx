@@ -99,7 +99,7 @@ function Homepage() {
       <BootStrapCarousal />
       <Footer1 />
       <Banner />
-      {/*<NavbarAfterLogin />*/}
+      <NavbarAfterLogin />
       <Row
         title="Continue Watching"
         fetchURL={userrequests.fetchNetflixOriginals}
