@@ -13,6 +13,7 @@ import userrequests from "../Request";
 import { BootStrapCarousal } from "./slideshow/BootStrapCarousal";
 import NavbarAfterLogin from "./NavbarAfterLogin";
 import Banner from "../Banner";
+import DropdownNav from "./DropdownNav";
 
 function Homepage() {
   return (
@@ -100,6 +101,9 @@ function Homepage() {
       <Footer1 />
       <Banner />
       <NavbarAfterLogin />
+
+      <DropdownNav />
+
       <Row
         title="Continue Watching"
         fetchURL={userrequests.fetchNetflixOriginals}

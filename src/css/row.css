@@ -1,29 +1,121 @@
-.row {
-  color: #fff;
-  background-color: #313552;
-  margin-left: 0px;
-}
 .row__posters {
   display: flex;
   overflow-y: hidden;
-  margin: 5px;
-  height: 200px;
   overflow-x: scroll;
   padding: 20px;
+  background-color: #313552;
 }
-
 .row__posters::-webkit-scrollbar {
   display: none;
-  margin: 5px;
 }
-.rowposter {
-  max-height: 100px;
+
+.row__poster {
   object-fit: contain;
-  margin-left: 10px;
   width: 100%;
-  cursor: pointer;
+  max-height: 250px;
+  margin-right: 10px;
   transition: transform 450ms;
+  border-radius: 10px;
 }
-.rowposters:hover {
+
+.row__poster:hover {
   transform: scale(1.5);
+}
+.dataHover {
+  border: 1px solid red;
+
+  z-index: 10;
+}
+
+.row__postersData {
+  display: flex;
+  border: 5px solid red;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+row__postersData:hover .dataHover {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 400px;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.container .card {
+  position: relative;
+  min-width: 200px;
+  max-height: 200px;
+  background-color: #fff;
+  display: flex;
+  margin-right: 10px;
+  border-radius: 15px;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+  border-radius: 15px;
+}
+.container .card:hover {
+  min-height: 250px;
+  min-width: 260px;
+}
+.timeWaster {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.image {
+  max-width: 250px;
+  max-height: 250px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image img {
+  border-radius: 15px;
+  height: 50% !important;
+
+  border: 5px solid red;
+}
+h2 {
+  color: white;
+}
+
+.container .card .content {
+  bottom: 0;
+  z-index: 5;
+  padding: 10px 15px;
+  color: #111;
+  text-align: center;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.container .card:hover .content {
+  margin-top: 30px;
+  visibility: visible;
+  opacity: 1;
+  top: 80%;
+  color: white;
+  font-weight: 400;
+  font-size: 18px;
+  left: 20%;
+  transform: translate (-50%, -50%);
+  transition-delay: 0.1s;
+}
+.rows {
+  background-color: #313552;
 }

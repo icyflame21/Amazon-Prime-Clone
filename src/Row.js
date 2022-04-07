@@ -7,6 +7,7 @@ const base_url = "https://image.tmdb.org/t/p/original/";
 function Row({ title, fetchURL }) {
   console.log(fetchURL);
   const [movies, setmovies] = React.useState([]);
+
   React.useEffect(() => {
     async function fetchData() {
       const request = await axios.get(fetchURL);
@@ -20,23 +21,46 @@ function Row({ title, fetchURL }) {
 
   return (
     <>
-      <div className="row">
-        <h2>{title}</h2>
-        <div className="row__posters">
-          {/* several posters */}
-          {movies.map((movie) => (
-            <img
-              key={movie.id}
-              className="row__poster"
-              src={`${base_url}${movie.poster_path}`}
-              alt={movie.name}
-            />
-            // <p className="row__poster">{movie.title}</p>
-          ))}
-        </div>
+      <div className="rows">
+        <h2 style={{ color: "white;" }}>{title}</h2>
 
-        {/* conatiner -> posters */}
+        <div className="container">
+          {/* several posters */}
+
+          {movies.map((movie) => {
+            return (
+              <div className="card">
+                <div classname="image">
+                  <img
+                    className="timeWaster"
+                    key={movie.id}
+                    src={`${base_url}${movie.poster_path}`}
+                    alt={movie.name}
+                  />
+                </div>
+
+                <div className="content">
+                  <i class="fa-solid fa-play">&nbsp;&nbsp;&nbsp; Play</i>
+
+                  {movie.original_name ? (
+                    <p> {movie.original_name} </p>
+                  ) : (
+                    <p>Lorem ipsum.</p>
+                  )}
+                  {movie.first_air_date ? (
+                    <p> {movie.first_air_date} </p>
+                  ) : (
+                    <p>Lorem ipsum.</p>
+                  )}
+                </div>
+              </div>
+            );
+            // <p className="row__poster">{movie.title}</p>
+          })}
+        </div>
       </div>
+
+      {/* conatiner -> posters */}
     </>
   );
 }
