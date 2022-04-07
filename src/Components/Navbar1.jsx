@@ -16,6 +16,7 @@ export const Navbar1 = () => {
         <div className={styles.nav1_rightDiv_language}>
           <img className={styles.nav1_img} src={LanguageEnLogo} alt="" />
         </div>
+        
         <div className={styles.nav1_rightDiv_signIn}>
           <Link className={styles.nav1_rightDiv_signIn_link} to="/signin">
             Sign In
