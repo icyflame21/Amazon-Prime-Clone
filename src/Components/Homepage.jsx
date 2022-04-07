@@ -100,7 +100,7 @@ function Homepage() {
       <BootStrapCarousal />
       <Footer1 />
       <Banner />
-      <NavbarAfterLogin />
+      {/*<NavbarAfterLogin />*/}
 
       <DropdownNav />
 
