@@ -4,6 +4,7 @@ const Button_LoginToPrime = styled.button`
     width: 263px;
     height: 50px;
     background: #0f79af;
+    border-radius:4px;
     margin-top: 47px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
