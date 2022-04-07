@@ -1,12 +1,14 @@
-import './App.css';
-import { Routes } from "./Components/Routes/Routes";
+import { AllRoutes } from "./Components/Routes/AllRoutes";
+import { useSelector } from "react-redux";
 
 function App() {
+  // trying adding redux here because
+
   return (
     <>
-    <Routes/>
+      <AllRoutes />
     </>
-  )
+  );
 }
 
 export default App;
