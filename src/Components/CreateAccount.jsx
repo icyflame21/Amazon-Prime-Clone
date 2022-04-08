@@ -2,9 +2,23 @@ import React from 'react';
 import logo from './Images/signinLogo.jpg'
 import { useRef } from 'react'
 import {Link,useNavigate} from "react-router-dom";
-
+import { ButtonToolbar } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.css';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Popover from 'react-bootstrap/Popover'
+import Button from 'react-bootstrap/Button';
 
 export const CreateAccount = () => {
+  const popoverClickRootClose = (
+    <Popover id="popover-trigger-click-root-close" title="Popover bottom" style={{
+      padding: '10px', textAlign: 'justify', width: 'fit-content', height: 'fit-content', borderRadius: '10px',
+    }}>
+      <strong style={{padding: '10px',}}>"Keep me Signed in"</strong>
+      <hr/>
+      Choosing "Keep me signed in" reduces the number of times you're asked to Sign-In on this device.
+      To keep your account secure, use this option only on your personal devices.
+    </Popover>
+  );
     const nameRef = useRef(null)
     const emailRef = useRef(null)
     const passwordRef1 = useRef(null)
@@ -12,15 +26,15 @@ export const CreateAccount = () => {
     const navigate= useNavigate()
     const submitData = (e) => {
         e.preventDefault();
-        // if (nameRef.current.value == "" || emailRef.current.value == "" || passwordRef1.current.value == "" || passwordRef2.current.value == "") {
-        //   alert("Please enter data to all feilds!!")
-        // }
-        // else if (passwordRef1.current.value.length < 6 || passwordRef2.current.value.length < 6) {
-        //     alert('Password must contain at least 6 characters')
-        // }
-        // else if (passwordRef1.current.value != passwordRef2.current.value) {
-        //     alert('Password is not matching')
-        // }
+        if (nameRef.current.value == "" || emailRef.current.value == "" || passwordRef1.current.value == "" || passwordRef2.current.value == "") {
+          alert("Please enter data to all feilds!!")
+        }
+        else if (passwordRef1.current.value.length < 6 || passwordRef2.current.value.length < 6) {
+            alert('Password must contain at least 6 characters')
+        }
+        else if (passwordRef1.current.value != passwordRef2.current.value) {
+            alert('Password is not matching')
+        }
         
         const details = {
             name: nameRef.current.value, 
@@ -28,19 +42,21 @@ export const CreateAccount = () => {
             password: passwordRef2.current.value
         }
       localStorage.setItem('user-details', JSON.stringify(details))
-      
-      navigate({pathname:"/login"})
+      if (details.name != "" && details.email != "" && details.password != "") {
+        navigate({ pathname: "/login" })
+      }
+
     }
     return (
           <>
             <img style={{width:'200px',height:'fit-content',objectFit:'contain',position:'relative',left:'43.5%'}} src={logo} alt="logo"></img>
-            <div class="container" style={{maxWidth: "380px",border: "1px solid lightgray",borderRadius:"5px",padding: "20px"}}>
+            <div class="container" style={{maxWidth: "380px",height:'fit-content',border: "1px solid lightgray",borderRadius:"5px",padding: "20px"}}>
 <div class="row">
     <div class="panel panel-primary">
         <div class="panel-body">
             <form class="form">
                 <div class="form-group">
-                                    <h2 class="h2" style={{paddingBottom:"20px",fontWeight:"400"}}>Create account</h2>
+                                    <h2 class="h2" style={{paddingBottom:"20px",fontWeight:"400",color: "black"}}>Create account</h2>
                 </div>
                 <div class="form-group">
                     <label class="control-label" for="signupName" style={{paddingBottom:'10px',fontWeight:'500'}}>Your name</label>
@@ -64,14 +80,22 @@ export const CreateAccount = () => {
                 </div>
                 <p class="form-group" style={{fontWeight: "400",
 	fontSize: "13px",
-                                    lineHeight: "22px"
-                                }}>By creating an account, you agree to our <a href="https://www.amazon.com/gp/help/customer/display.html/ref=ap_signin_notification_condition_of_use?ie=UTF8&nodeId=508088">Conditions of Use</a> and <a href="https://www.amazon.com/gp/help/customer/display.html/ref=ap_signin_notification_privacy_notice?ie=UTF8&nodeId=468496">Privacy Notice</a>.</p>
+                                    lineHeight: "22px"}}>
+                                By creating an account, you agree to our <a href="https://www.amazon.com/gp/help/customer/display.html/ref=ap_signin_notification_condition_of_use?ie=UTF8&nodeId=508088" style={{color: 'blue'}}>Conditions of Use</a> and <a href="https://www.amazon.com/gp/help/customer/display.html/ref=ap_signin_notification_privacy_notice?ie=UTF8&nodeId=468496" style={{color: 'blue'}}>Privacy Notice</a>.</p>
   <div class="form-check">
   <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" unchecked/>
-                    <label class="form-check-label">Keep me signed in.</label><a href="#" title="Header" data-toggle="popover" data-placement="top" data-content="Content" style={{
-                      textDecoration: 'none',
-                    }}>&nbsp; Details</a>
-                  </div>
+                    <label class="form-check-label">Keep me signed in.</label>
+                    <ButtonToolbar>
+                    <OverlayTrigger
+                            trigger="click"
+                            rootClose
+      placement="top"
+      overlay={popoverClickRootClose}
+    >
+      <Button style={{ background:'none', color:'#0f79af',border: 'none', position:'relative',bottom:'26px',left:'140px',fontSize:'12px' }}>Learn</Button>
+    </OverlayTrigger>
+                    </ButtonToolbar>
+</div>
                                 <div class="form-group">
                                    <Link to="/login"><button onClick={submitData} id="signupSubmit" type="submit" class="btn btn-info btn-block" style={{
                                         margin: "20px 0 20px 0", width: '338px',fontWeight:'400',fontSize:'14px',background:'#f77d0099',border:'1px solid #f77d0099'
@@ -89,7 +113,7 @@ export const CreateAccount = () => {
                     marginTop: "30px",
                     display: "flex",
                     justifyContent: "space-evenly",
-                    marginLeft: "37%",fontSize: "13px",
+                    marginLeft: "39%",fontSize: "13px",
                     lineHeight: "12px",
                     color: "#6366c4"}}>
                     <p>Conditions of Use</p>
@@ -101,7 +125,7 @@ export const CreateAccount = () => {
 	fontSize: "13px",
 	lineHeight: "12px",
 	color: "#222222",
-	marginLeft: "43%",position: "relative",right: "40px"}}>
+	marginLeft: "45%",position: "relative",right: "40px"}}>
                         &#169;1996-2021, Amazon.com, Inc. or its affilates
                     </p>
           </div>

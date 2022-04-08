@@ -7,9 +7,9 @@
   padding-right: 20px;
 }
 .userdropdown div {
-  background-color: #161829;
+  background-color: aqua;
   color: white;
   font-size: 20px;
+  z-index: 100;
   font-weight: bold;
-  hover: cursor;
 }

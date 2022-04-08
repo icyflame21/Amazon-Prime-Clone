@@ -5,7 +5,7 @@ const DropdownNav = () => {
     <div className="userdropdown">
       <div className="dropdown">
         <a className="dropdown-toggle" data-toggle="dropdown" href="/">
-          User
+          Rajan
         </a>
         <div class="dropdown-menu" role="menu">
           <ul>
