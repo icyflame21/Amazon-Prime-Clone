@@ -69,27 +69,27 @@ download the .zip file.  Extract the contents of the zip file, then open your te
 
 ## Snap Shots 📷
 
-Home Page
+**Home Page**
 
 ![Logo](https://images2.imgbox.com/fa/62/TCkJtA3F_o.jpg)
 
-Sign In
+**Sign In**
 
 ![Logo](https://images2.imgbox.com/55/8e/f9v3aKKV_o.jpg)
 
-Log In
+**Log In**
 
 ![Logo](https://images2.imgbox.com/9e/9e/UZ4fDGvU_o.jpg)
 
-Payment Section
+**Payment Section**
 
 ![Logo](https://images2.imgbox.com/65/bc/20Y3bY71_o.jpg)
 
-Movie Page after user login
+**Movie Page after user login**
 
 ![Logo](https://images2.imgbox.com/66/c3/v9VUf8vh_o.jpg)
 
-YouTube Trailer
+**YouTube Trailer**
 
 ![Logo](https://images2.imgbox.com/9c/d8/0ZIiZwcn_o.jpg)
 
