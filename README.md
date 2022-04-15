@@ -96,7 +96,7 @@ YouTube Trailer
 
 ## References ⏩
 
-* Icons are used from  material ui  
+* Icons are used from  material UI  
     https://material-ui.com/components/material-icons/
     
 * Animation Effects are used from BootStrap 5  
