@@ -59,7 +59,7 @@ download the .zip file.  Extract the contents of the zip file, then open your te
 - Judicious use of React-YouTube & movie-trailer npm package to fetch its relevant trailer from Youtube using movie ID fetched from TMDB API.
 - MUI icons with animation effects from BootStrap 5 hass been precisely used.
 
-# Responsibilities 💪
+## Responsibilities 💪
 
 - Team Lead in mananging & directing overall project's structure to deliver it within the deadlines.
 - Landing page UI built on styled components, MUI Icons & BootStrap 5 components i.e.; Button Fade, etc.
