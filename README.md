@@ -111,7 +111,7 @@ download the .zip file.  Extract the contents of the zip file, then open your te
 
 ## Contributors  😇
 
-- 👤 [Biswaranjan](https://www.github.com/icyflame21) (Team Lead)
+- 👤 [Biswaranjan](https://www.github.com/icyflame21) 
 - 👤 [Rajan Kumar](https://www.github.com/Rajan1397)
 - 👤 [Abhijeet Sinha](https://www.github.com/Abhijeetsinha471)
 
