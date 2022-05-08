@@ -34,6 +34,7 @@ const NavbarAfterLogin = () => {
   }
 
   function Render_results(result) {
+    listresult.innerHTML="";
     result.forEach(movie => {
       const { title, poster_path } = movie;
       const searchEl = document.createElement('div');
@@ -100,7 +101,6 @@ const NavbarAfterLogin = () => {
                 spellCheck="false"
                 />
                 <main className="resultsList">
-                <div className="resultsList_items"></div>
               </main>
               </div>
             </div>
